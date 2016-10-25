@@ -1,0 +1,26 @@
+{
+  "name": "media_home",
+  "homepage": "https://github.com/lsumedia/media_home",
+  "authors": [
+    "Cameron Small <camerontsmall@googlemail.com>"
+  ],
+  "description": "Basis for Pamphlet 4-based websites",
+  "main": "index.php",
+  "keywords": [
+    "frontend"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "materialize": "^0.97.7",
+    "diff-dom": "^2.1.1"
+  }
+}
