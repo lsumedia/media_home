@@ -30,11 +30,18 @@ class PamphletAPI{
     }
     
     /* Return search results for a given term */
-    function search($query, $limit = null, $offset = null){
+    function search($query, $limit = null, $offset = null, $category = null){
+        
+        global $config;
+        
+        if(!$category){
+            $category = $config['category'];
+        }
         
         $url = $this->root . 'api_public.php?a=search&q=' . $query;
         if($limit) $url .+ '&l=' . $limit;
         if($offset) $url .+ '&o=' . $offset;
+        if($category) $url .+ '&c=' . $category;
         $data = json_decode(file_get_contents($url));
 
         return $data;

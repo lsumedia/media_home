@@ -20,5 +20,7 @@ class search_handler extends Handler{
      </div>
 </div>
 <?php
+
+
     }
 }
