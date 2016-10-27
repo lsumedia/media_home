@@ -26,4 +26,18 @@ if((!include 'config.php') && (!include 'config.sample.php')){
 
 /* Load in dependencies */
 
-/* Load in views */
+require 'functions/pamphlet_api.php';
+require 'functions/handlers.php';
+
+/* Load in handlers */
+
+$i_dir = 'handlers';
+
+$comp_includes = scandir($i_dir);
+
+foreach($comp_includes as $comp_ifile){
+    if(strpos($comp_ifile, '.php') !== false){
+        //echo $dir . '/' . $comp_ifile;
+        include($i_dir . '/' . $comp_ifile);
+    }
+}
