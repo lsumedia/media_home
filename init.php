@@ -26,6 +26,7 @@ if((!include 'config.php') && (!include 'config.sample.php')){
 
 /* Load in dependencies */
 
+require 'functions/toolkit.php';
 require 'functions/pamphlet_api.php';
 require 'functions/handlers.php';
 

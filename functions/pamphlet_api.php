@@ -29,6 +29,17 @@ class PamphletAPI{
         
     }
     
+    /* Return search results for a given term */
+    function search($query, $limit = null, $offset = null){
+        
+        $url = $this->root . 'api_public.php?a=search&q=' . $query;
+        if($limit) $url .+ '&l=' . $limit;
+        if($offset) $url .+ '&o=' . $offset;
+        $data = json_decode(file_get_contents($url));
+
+        return $data;
+    }
+    
     /* Return URL for the generate function for a given task */
     function generated($path){
         return $this->root . 'generated.php?a=' . $path;

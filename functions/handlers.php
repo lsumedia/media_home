@@ -10,12 +10,17 @@ class Handler{
      */
     public static $name;
     
+    public static $use_api = true;
+    
     public function __construct($task, $api) {
         
         $this->api = $api;
         $this->task = $task;
         
-        
+        if($this::$use_api){
+            $this->data = $api->get($task);
+        }
+       
         
     }
     
@@ -29,12 +34,20 @@ class Handler{
         
     }
     
-    public function RenderOne(){
+    public function RenderList() {
+        $data = $this->api->get($this->task);
+        
+        echo "<ul>";
+        foreach($data as $item){
+            echo "<li><a href=\"" . taskurl( $this->task[0] .  '/' . $item->_id) . "\">" . $item->title . "</a></li>";
+        }
+        echo "</ul>";
         
     }
     
-    public function RenderList(){
-        
+    public function RenderOne(){
+        $data = $this->api->get($this->task);
+        echo $data->title;
     }
     
     public function PrintSocialMediaMeta(){
