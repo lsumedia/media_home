@@ -29,6 +29,10 @@ class Video extends Handler{
         
         $generated_url = $this->api->generated($this->task);
         
+        if($data->show_id){
+            $show = $this->api->get(['show',$data->show_id]);
+        }
+        
         ?>
 
 <div class="video-darkbox">
@@ -41,12 +45,24 @@ class Video extends Handler{
     </div>
 </div>
 
-<div class="container video-info">
+<div class="container video-info ">
     <div class="card-panel z-depth-0">
         <h4><?= $data->title ?></h4>
         <p><?= $data->description ?></p>
     </div>
+    
+    <?php if($show): ?>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src="<?= $show->poster ?>" />
+            </div>
+            <?= $show->title ?>
+        </div>
+    <?php endif; ?>
+    
 </div>
+
+
 
 <?php
     }
