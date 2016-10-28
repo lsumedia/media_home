@@ -49,6 +49,9 @@ class PamphletAPI{
     
     /* Return URL for the generate function for a given task */
     function generated($path){
+        if(is_array($path)){
+            $path = implode('/',$path);
+        }
         return $this->root . 'generated.php?a=' . $path;
     }
     

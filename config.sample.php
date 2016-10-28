@@ -12,6 +12,12 @@ $config = [
     "use_rewrite" => false,
     
     /* Base URL - used if rewrite is on */
-    "base_url" => "/home/"
+    "base_url" => "/home/",
+    
+    /* Logo to use */
+    "logo" => "res/img/lsutv_master.png",
+    
+    /* Theme colour */
+    "theme_color" => "#EC2228"
     
 ];

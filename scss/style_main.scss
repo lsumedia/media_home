@@ -21,6 +21,10 @@
 
 $lsutv_red: #EC2228;
 
+html{
+    overflow-y:scroll;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -82,7 +86,9 @@ iframe{
 
 nav{
     background-color:$lsutv_red;
+    //background-color:white;
 }
+
 
 #main-nav{
     background-color:transparent;
@@ -112,6 +118,10 @@ nav{
 
 .video-container{
     background-size:cover;
+}
+
+.video-darkbox{
+   background-color:black;
 }
 
 #main-content{

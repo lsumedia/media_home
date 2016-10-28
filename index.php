@@ -24,6 +24,11 @@ $handler = new $handler_name($task,$api);
         <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="css/style_main.css" />
+        <style>
+            .theme-color{ background-color: <?= $config['theme_color'] ?>;}
+            .theme-color-text{ color <?= $config['theme_color'] ?>; }
+        </style>
+        <?php $handler->headers(); ?>
     </head>
     <body>
         

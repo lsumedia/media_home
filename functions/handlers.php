@@ -35,7 +35,7 @@ class Handler{
     }
     
     public function RenderList() {
-        $data = $this->api->get($this->task);
+        $data = $this->data;
         
         echo "<ul>";
         foreach($data as $item){
@@ -46,12 +46,14 @@ class Handler{
     }
     
     public function RenderOne(){
-        $data = $this->api->get($this->task);
-        echo $data->title;
+        echo $this->data->title;
     }
     
     public function PrintSocialMediaMeta(){
         
+    }
+    
+    public function Headers(){
     }
     
     public static function GetHandlerForTask($task){
@@ -66,4 +68,5 @@ class Handler{
         //Use default handler if not found
         return "Handler";
     }
+    
 }

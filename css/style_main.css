@@ -2,6 +2,9 @@
     Created on : 30-Apr-2016, 11:51:03
     Author     : Cameron Small
 */
+html {
+  overflow-y: scroll; }
+
 body {
   display: flex;
   min-height: 100vh;
@@ -68,6 +71,9 @@ nav {
 
 .video-container {
   background-size: cover; }
+
+.video-darkbox {
+  background-color: black; }
 
 #main-content {
   margin-top: 2em; }
