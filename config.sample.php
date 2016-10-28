@@ -9,6 +9,9 @@ $config = [
     "category" => "lsutv",
     
     /* If mod_rewrite is working, set to true */
-    "use_rewrite" => false
+    "use_rewrite" => false,
+    
+    /* Base URL - used if rewrite is on */
+    "base_url" => "/home/"
     
 ];
