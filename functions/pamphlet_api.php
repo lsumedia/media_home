@@ -16,7 +16,7 @@ class PamphletAPI{
      * @param optional string $path Pamphlet path
      * @param optional array $filter MongoDB filter (optional)
      */
-    function get($path, $filter = [], $limit = 0, $category = null){
+    function get($path, $filter = [], $limit = null, $offset = null, $category = null){
         global $config;
         
         if(!$category){
@@ -26,9 +26,12 @@ class PamphletAPI{
         if(is_array($path)){  $path = implode('/', $path); }
         
         $url = $this->root . 'api_public.php?a=' . $path;
-        if($filter) $url = $url . '&q=' . urlencode(json_encode($filter));
-        if($limit) $url = $url . '&l=' . $limit;
+        if($filter){ $url = $url . '&q=' . urlencode(json_encode($filter));}
+        if($limit){ $url = $url . '&l=' . $limit;}
+        if($offset){ $url = $url . '&o=' . $offset;}
         if($category){ $url = $url . '&c=' . urlencode($category); }
+        
+        //echo $url;
         
         $data = json_decode(file_get_contents($url));
         

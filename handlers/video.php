@@ -6,13 +6,22 @@ class Video extends Handler{
     
     public function RenderList() {
         $data = $this->api->get($this->task);
-        
-        echo "<ul>";
-        foreach($data as $item){
-            echo "<li><a href=\"" . taskurl('video/' . $item->_id) ."\">" . $item->title . "</a></li>";
-        }
-        echo "</ul>";
-        
+
+        ?>
+<div class="container">
+    <h4>All Videos</h4>
+    <div class="video-list">
+        <?php foreach($data as $item): ?>
+        <div class="card-panel">
+            <a href="<?= taskurl('video/' . $item->_id) ?>">
+            <?= $item->title ?>
+            </a>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<?php
+
     }
     
     public function RenderOne(){

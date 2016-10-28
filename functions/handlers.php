@@ -17,7 +17,7 @@ class Handler{
         $this->api = $api;
         $this->task = $task;
         
-        if($this::$use_api){
+        if($this::$use_api && $task[1]){
             $this->data = $api->get($task);
         }
        
@@ -25,6 +25,8 @@ class Handler{
     }
     
     public function Render(){
+        
+        if(!$data) $data = $this->api->get($this->task);
         
         if($this->task[1]){
             $this->RenderOne();
@@ -35,7 +37,7 @@ class Handler{
     }
     
     public function RenderList() {
-        $data = $this->data;
+        if(!$data) $data = $this->api->get($this->task);
         
         echo "<ul>";
         foreach($data as $item){

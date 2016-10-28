@@ -67,13 +67,17 @@ nav {
 
 #tv-logo {
   height: 56px;
-  margin: 0px; }
+  margin: 0px;
+  margin-left: 6px; }
 
 .video-container {
   background-size: cover; }
 
 .video-darkbox {
   background-color: black; }
+
+.video-pane {
+  max-width: 1100px; }
 
 #main-content {
   margin-top: 2em; }
