@@ -1,0 +1,20 @@
+main{
+    margin-top:0px;
+}
+nav{
+    background-color:white;
+    box-shadow: none;
+}
+
+.navbar-fixed nav {
+    position: inherit;
+}
+nav ul a{
+    color:black;
+}
+.dropdown-content li > a, .dropdown-content li > span{
+    color:black;
+}
+.theme-color{
+    background-color:inherit;
+}

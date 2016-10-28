@@ -44,24 +44,9 @@ class ChannelHandler extends Handler{
     
     public function Headers(){
         global $config;
+        //Use inverted logo
         $config['logo'] = $config['logo_inverse'];
-        ?>
-<style>
-    main{
-        margin-top:0px;
-    }
-    nav{
-        background-color:white;
-    }
-    nav ul a{
-        color:black;
-    }
-    .dropdown-content li > a, .dropdown-content li > span{
-        color:black;
-    }
-    /*.brand-logo img{ -webkit-filter:invert(100); filter:invert(100); }*/
-</style>
-        <?php
+        echo '<link rel="stylesheet" href="css/video.css" />';
     }
 }
 
