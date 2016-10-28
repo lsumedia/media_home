@@ -10,7 +10,7 @@ class search_handler extends Handler{
 <div class="container">
     <div class="row">
         <div class="column s12">
-             <nav class="nav-wrapper theme-blue">
+             <nav class="nav-wrapper theme-color">
                 <div class="input-field">
                      <input id="search-bar" onchange="function(){ var term = $('#search-bar').val(); pages.loadPage('search&term=' + term); }" class="active" name="term" type="search" required value="<?= (trim($term) == '')? '' : $term ?>" placeholder="Search" >
                      <label for="search-bar"><i class="material-icons">search</i></label>

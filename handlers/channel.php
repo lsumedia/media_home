@@ -9,7 +9,7 @@ class ChannelHandler extends Handler{
         
         echo "<ul>";
         foreach($data as $item){
-            echo "<li><a href=\"" . taskurl('video/' . $item->_id) ."\">" . $item->title . "</a></li>";
+            echo "<li><a href=\"" . taskurl('channel/' . $item->_id) ."\">" . $item->title . "</a></li>";
         }
         echo "</ul>";
         

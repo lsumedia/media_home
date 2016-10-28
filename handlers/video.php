@@ -53,6 +53,11 @@ class Video extends Handler{
     }
     nav{
         background-color:white;
+        box-shadow: none;
+    }
+    
+    .navbar-fixed nav {
+        position: inherit;
     }
     nav ul a{
         color:black;
@@ -60,7 +65,9 @@ class Video extends Handler{
     .dropdown-content li > a, .dropdown-content li > span{
         color:black;
     }
-    /*.brand-logo img{ -webkit-filter:invert(100); filter:invert(100); }*/
+    .theme-color{
+        background-color:inherit;
+    }
 </style>
         <?php
     }

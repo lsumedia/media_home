@@ -14,9 +14,9 @@
     <li><a href="./search?term=sport">Sport</a></li>
 </ul>
 <div class="navbar-fixed">
-    <nav>
+    <nav class="theme-color">
         <!-- Desktop nav bar -->
-        <div class="nav-wrapper" id="main-nav theme-color-text">
+        <div class="nav-wrapper" id="main-nav">
            <div class="container">
                 <div class="brand-logo">
                     <a href="."><img src="<?= $config['logo'] ?>" alt="LSUTV Logo" id="tv-logo" style="float:left;"/></a>

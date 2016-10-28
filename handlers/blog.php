@@ -18,11 +18,26 @@ class Blog extends Handler{
     public function RenderOne(){
         $data = $this->api->get($this->task);
         
+        $atags = explode(' ', $data->tags);
+        
         ?>
 
 
 <div class="container blog-content">
         <h4><?= $data->title ?></h4>
+        <div class="blog-info">
+            <?php if ($data->tags): ?>
+                <span class="tags">Tags:&nbsp;
+                <?php foreach($atags as $tag): ?>
+                    <div class="chip">
+                        <a href="<?= taskurl('search&q=' . $tag)?>">
+                        <?= $tag ?>
+                        </a>
+                    </div>
+                <?php endforeach;?>
+                </span>
+            <?php endif; ?>
+        </div>
         <p><?= $data->content ?></p>
 </div>
 
