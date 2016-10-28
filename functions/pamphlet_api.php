@@ -26,7 +26,7 @@ class PamphletAPI{
         if(is_array($path)){  $path = implode('/', $path); }
         
         $url = $this->root . 'api_public.php?a=' . $path;
-        if($filter) $url = $url . '&f=' . json_encode($filter);
+        if($filter) $url = $url . '&q=' . urlencode(json_encode($filter));
         if($limit) $url = $url . '&l=' . $limit;
         if($category){ $url = $url . '&c=' . urlencode($category); }
         

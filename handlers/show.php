@@ -8,7 +8,7 @@ class ShowHandler extends Handler{
         
         $data = $this->data;
         $episodes = $this->api->get(["video"],['show_id' => $data->_id]);
-
+        
         ?>
 <div class="container">
     <h4><?= $data->title ?></h4>
