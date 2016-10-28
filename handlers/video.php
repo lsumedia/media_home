@@ -9,7 +9,7 @@ class Video extends Handler{
         
         echo "<ul>";
         foreach($data as $item){
-            echo "<li><a href=\"./?a=video/{$item->_id}\">" . $item->title . "</a></li>";
+            echo "<li><a href=\"" . taskurl('video/' . $item->_id) ."\">" . $item->title . "</a></li>";
         }
         echo "</ul>";
         

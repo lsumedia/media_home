@@ -20,7 +20,7 @@ $handler = new $handler_name($task,$api);
 <!doctype html>
 <html>
     <head>
-        <?= ($config['use_rewrite'])? "<base href=\"{$config['base_url']}\" />" : "" ?>
+        <?= ($config['use_rewrite'])? "<base href=\"{$config['base_url']}\" />" : "" ?> 
         <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="css/style_main.css" />
