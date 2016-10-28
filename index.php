@@ -24,6 +24,7 @@ $handler = new $handler_name($task,$api);
         <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="css/style_main.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <style>
             .theme-color{ background-color: <?= $config['theme_color'] ?>;}
             .theme-color-text{ color <?= $config['theme_color'] ?>; }
