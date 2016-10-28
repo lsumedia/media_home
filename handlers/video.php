@@ -44,7 +44,8 @@ class Video extends Handler{
     
     public function Headers(){
         global $config;
-        $config['logo'] = "res/img/lsutv_master.png";
+        //Use inverted logo
+        $config['logo'] = $config['logo_inverse'];
         ?>
 <style>
     main{

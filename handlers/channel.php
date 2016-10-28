@@ -44,7 +44,7 @@ class ChannelHandler extends Handler{
     
     public function Headers(){
         global $config;
-        $config['logo'] = "res/img/media_mono.png";
+        $config['logo'] = $config['logo_inverse'];
         ?>
 <style>
     main{
