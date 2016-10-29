@@ -26,7 +26,7 @@ class ChannelHandler extends Handler{
     <div class="container video-pane">
         <div class="video-container">
             <iframe class="video" src="<?= $generated_url ?>&autoplay=1">
-                Your browser does not support iframes. I'm afraid there's not much hope for you.
+                In order to view this content, please switch to a browser which supports IFrames.
             </iframe>
         </div>
     </div>

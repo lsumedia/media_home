@@ -5,7 +5,7 @@ class Blog extends Handler{
     public static $name = "blog";
     
     public function RenderList() {
-        $data = $this->api->get($this->task,[],10);
+        $data = $this->api->get(['blog']);
         
         echo "<ul>";
         foreach($data as $item){
@@ -16,7 +16,8 @@ class Blog extends Handler{
     }
     
     public function RenderOne(){
-        if(!$data) $data = $this->api->get($this->task);
+        if(!$this->data){ $this->data = $this->api->get($this->task);}
+        $data = $this->data;
         
         $atags = explode(' ', $data->tags);
         
