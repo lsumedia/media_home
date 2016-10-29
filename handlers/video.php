@@ -70,7 +70,9 @@ class Video extends Handler{
     public function Headers(){
         global $config;
         //Use inverted logo
-        $config['logo'] = $config['logo_inverse'];
-        echo '<link rel="stylesheet" href="css/video.css" />';
+        if($this->task[1]){
+            $config['logo'] = $config['logo_inverse'];
+            echo '<link rel="stylesheet" href="css/video.css" />';
+        }
     }
 }

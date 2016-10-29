@@ -44,9 +44,11 @@ class ChannelHandler extends Handler{
     
     public function Headers(){
         global $config;
-        //Use inverted logo
-        $config['logo'] = $config['logo_inverse'];
-        echo '<link rel="stylesheet" href="css/video.css" />';
+        if($this->task[1]){
+            //Use inverted logo
+            $config['logo'] = $config['logo_inverse'];
+            echo '<link rel="stylesheet" href="css/video.css" />';
+        }
     }
 }
 
