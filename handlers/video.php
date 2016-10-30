@@ -5,17 +5,24 @@ class Video extends Handler{
     public static $name = "video";
     
     public function RenderList() {
-        $data = $this->api->get($this->task);
+        $data = $this->api->get($this->task,[],10);
 
         ?>
 <div class="container">
-    <h4>All Videos</h4>
+    <h4>Recent videos</h4>
     <div class="video-list">
         <?php foreach($data as $item): ?>
-        <div class="card-panel">
-            <a href="<?= taskurl('video/' . $item->_id) ?>">
-            <?= $item->title ?>
+        <div class="row">
+            <div class="col s4 l3">
+                <div class="video-container video-darkbox z-depth-1">
+                    <img class="video" style="width:100%;" src="<?= $item->poster ?>"/>
+                </div>
+            </div>
+            <div class="col s8 l9">
+                 <a href="<?= taskurl('video/' . $item->_id) ?>">
+                <h5><?= $item->title ?></h5>
             </a>
+            </div>
         </div>
         <?php endforeach; ?>
     </div>
@@ -38,7 +45,7 @@ class Video extends Handler{
 <div class="video-darkbox">
     <div class="container video-pane">
         <div class="video-container">
-            <iframe class="video" src="<?= $generated_url ?>">
+            <iframe class="video" src="<?= $generated_url ?>&autoplay=1">
                 Your browser does not support iframes. I'm afraid there's not much hope for you.
             </iframe>
         </div>
