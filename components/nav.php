@@ -7,11 +7,11 @@
 </ul>
 <!-- Dropdown for Shows button -->
 <ul id="cosec-dropdown" class="dropdown-content red-text">
-    <li><a href="./search?term=features">Features</a></li>
-    <li><a href="./search?term=entertainment">Entertainment</a></li>
-    <li><a href="./search?term=news">News</a></li>
-    <li><a href="./search?term=music">Music</a></li>
-    <li><a href="./search?term=sport">Sport</a></li>
+    <li><a href="<?= taskurl('search&q=features') ?>">Features</a></li>
+    <li><a href="<?= taskurl('search&q=entertainment') ?>">Entertainment</a></li>
+    <li><a href="<?= taskurl('search&q=news') ?>">News</a></li>
+    <li><a href="<?= taskurl('search&q=music') ?>">Music</a></li>
+    <li><a href="<?= taskurl('search&q=sport') ?>">Sport</a></li>
 </ul>
 <div class="navbar-fixed">
     <nav class="theme-color">
