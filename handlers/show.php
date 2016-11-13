@@ -10,14 +10,25 @@ class ShowHandler extends Handler{
         $episodes = $this->api->get(["video"],['show_id' => $data->_id]);
         
         ?>
+<div class="full-width-header">
+    <img src="<?= $data->poster ?>" />
+</div>
 <div class="container">
     <h4><?= $data->title ?></h4>
-    <p>Episodes:</p>
-    <ul>
-        <?php foreach($episodes as $episode): ?>
-        <li><a href="<?= taskurl('video/' . $episode->_id) ?>"><?= $episode->title ?></a></li>
-        <?php endforeach; ?>
-    </ul>
+    <p><?= $data->description ?></p>
+    <div class="episodes">
+        <div class="row">
+            <div class="col s12 m6 l8">
+                 <h5>Episodes</h5>
+            </div>
+            <div class="col s10 m6 l4">
+                <input class="search" type="text" placeholder="Search" />
+            </div>
+        </div>
+        <div class="row">
+        <?php foreach($episodes as $episode){ Video::printItem($episode);} ?>
+        </div>
+    </div>
 </div>
 <?php
         

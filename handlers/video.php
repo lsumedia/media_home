@@ -11,20 +11,11 @@ class Video extends Handler{
 <div class="container">
     <h4>Recent videos</h4>
     <div class="video-list">
-        <?php foreach($data as $item): ?>
         <div class="row">
-            <div class="col s4 l3">
-                <div class="video-container video-darkbox z-depth-1">
-                    <img class="video" style="width:100%;" src="<?= $item->poster ?>"/>
-                </div>
-            </div>
-            <div class="col s8 l9">
-                 <a href="<?= taskurl('video/' . $item->_id) ?>">
-                <h5><?= $item->title ?></h5>
-            </a>
-            </div>
+        <?php foreach($data as $item){
+            Video::PrintItem($item);
+        } ?>
         </div>
-        <?php endforeach; ?>
     </div>
 </div>
 <?php
@@ -60,17 +51,18 @@ class Video extends Handler{
     
     <?php if($show): ?>
         <div class="card horizontal">
-            <div class="card-image">
-                <img src="<?= $show->poster ?>" />
-            </div>
-            <?= $show->title ?>
+            <a href="<?= taskurl('show/'. $show->_id) ?>">
+                <div class="card-image">
+                    <img src="<?= $show->poster ?>" />
+                </div>
+                <div class="card-content">
+                    <p class="card-title"><?= $show->title ?></p>
+                </div>
+            </a>
         </div>
     <?php endif; ?>
     
 </div>
-
-
-
 <?php
     }
     
@@ -81,5 +73,18 @@ class Video extends Handler{
             $config['logo'] = $config['logo_inverse'];
             echo '<link rel="stylesheet" href="css/video.css" />';
         }
+    }
+    
+    public static function PrintItem($data){
+        ?>
+        <div class="col s12 m4 l2">
+                <a href="<?= taskurl('video/' . $data->_id) ?>">
+                    <div class="video-darkbox sixteen-nine z-depth-1">
+                        <img src="<?= $data->poster ?>" class="sixteen-nine-inner"/>
+                    </div>
+                    <?= $data->title ?>
+                </a>
+            </div>
+        <?php
     }
 }

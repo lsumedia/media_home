@@ -146,6 +146,17 @@ nav {
   line-height: 61px;
   margin: 0; }
 
+.episodes ul, .episodes ol {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+.episodes li {
+  display: block;
+  width: 40%; }
+.episodes .search:active {
+  border-color: #EC2228; }
+
 /* Responsive image container */
 .sixteen-nine {
   width: 100%;
@@ -168,6 +179,9 @@ nav {
   left: 0;
   background-color: black;
   color: white; }
+
+.inline {
+  display: inline-block; }
 
 /* Player container special adjustments */
 .spotify-container:after {

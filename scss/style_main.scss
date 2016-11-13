@@ -224,6 +224,24 @@ overflow:hidden;
    }
 }
 
+.episodes{
+    ul, ol{
+        list-style:none;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    li{
+        display:block;
+        width:40%;
+    }
+    
+    
+    .search:active{
+        border-color:$lsutv_red;
+    }
+}
+
 /* Responsive image container */
 .sixteen-nine{
   width: 100%;
@@ -248,6 +266,9 @@ overflow:hidden;
   color: white;
 }
 
+.inline{
+    display:inline-block;
+}
 /* Player container special adjustments */
 
 .spotify-container:after{
