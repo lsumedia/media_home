@@ -25,7 +25,7 @@ class ChannelHandler extends Handler{
 <div class="video-darkbox">
     <div class="container video-pane">
         <div class="video-container">
-            <iframe class="video" src="<?= $generated_url ?>&autoplay=1">
+            <iframe class="video" src="<?= $generated_url ?>&autoplay=1" allowfullscreen="allowfullscreen">
                 In order to view this content, please switch to a browser which supports IFrames.
             </iframe>
         </div>

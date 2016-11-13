@@ -36,7 +36,7 @@ class Video extends Handler{
 <div class="video-darkbox">
     <div class="container video-pane">
         <div class="video-container">
-            <iframe class="video" src="<?= $generated_url ?>&autoplay=1">
+            <iframe class="video" src="<?= $generated_url ?>&autoplay=1" allowfullscreen="allowfullscreen">
                 Your browser does not support iframes. I'm afraid there's not much hope for you.
             </iframe>
         </div>
