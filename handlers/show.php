@@ -40,4 +40,34 @@ class ShowHandler extends Handler{
 <?php
         
     }
+    
+    public function RenderList(){
+        $data = $this->data;
+        if(!$data) $data = $this->api->get($this->task);
+        
+        ?>
+<div class="container">
+    <h4>Shows</h4>
+    <div class="row">
+    <?php foreach($data as $item){
+        self::PrintItem($item);
+    }
+    ?>
+    </div>
+</div>
+<?php
+    }
+    
+    public static function PrintItem($data){
+        ?>
+        <div class="col s12 m4 l3">
+                <a href="<?= taskurl('show/' . $data->_id) ?>">
+                    <div class="video-darkbox sixteen-nine z-depth-1">
+                        <img src="<?= $data->poster ?>" class="sixteen-nine-inner"/>
+                    </div>
+                    <h5><?= $data->title ?></h5>
+                </a>
+            </div>
+        <?php
+    }
 }
