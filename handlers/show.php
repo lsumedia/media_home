@@ -9,10 +9,12 @@ class ShowHandler extends Handler{
         $data = $this->data;
         $episodes = $this->api->get(["video"],['show_id' => $data->_id]);
         
+        if($data->poster){
         ?>
-<div class="full-width-header">
-    <img src="<?= $data->poster ?>" />
+<div class="parallax-container channel-header">
+    <div class="parallax"><img src="<?= $data->poster ?>" /></div>
 </div>
+        <?php } ?>
 <div class="container">
     <h4><?= $data->title ?></h4>
     <p><?= $data->description ?></p>
@@ -30,6 +32,11 @@ class ShowHandler extends Handler{
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+</script>
 <?php
         
     }

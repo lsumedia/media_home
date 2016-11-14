@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
+    "jquery" : "2.1.1",
     "handlebars": "^4.0.5",
     "materialize": "^0.97.7",
     "diff-dom": "^2.1.1"

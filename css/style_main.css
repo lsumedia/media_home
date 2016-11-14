@@ -41,12 +41,18 @@ iframe {
 .parallax-container {
   height: 300px; }
 
-.parallax {
-  -webkit-filter: blur(30px);
-  -moz-filter: blur(30px);
-  -ms-filter: blur(30px);
-  filter: blur(30px);
-  background-color: black; }
+/*
+.parallax{
+    $pblur: 5px;
+    $pfilter: blur(30px);
+    -webkit-filter:$pfilter;
+    -moz-filter:$pfilter;
+    -ms-filter:$pfilter;
+    filter:$pfilter;
+    background-color:black;
+}*/
+.channel-header {
+  margin-top: -2em; }
 
 nav {
   background-color: #EC2228; }

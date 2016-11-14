@@ -29,6 +29,11 @@ $handler = new $handler_name($task,$api);
             .theme-color{ background-color: <?= $config['theme_color'] ?>;}
             .theme-color-text{ color <?= $config['theme_color'] ?>; }
         </style>
+        
+        <!-- Load scripts -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        
         <?php $handler->headers(); ?>
     </head>
     <body>
@@ -39,9 +44,7 @@ $handler = new $handler_name($task,$api);
         <?php $handler->Render(); ?>
         </main>
         
-        <!-- Load scripts -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        
     </body>
 </html>
 

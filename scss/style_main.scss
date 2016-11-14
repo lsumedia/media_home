@@ -73,7 +73,7 @@ iframe{
 .parallax-container {
    height: 300px;
  }
- 
+ /*
  .parallax{
      $pblur: 5px;
      $pfilter: blur(30px);
@@ -82,6 +82,10 @@ iframe{
      -ms-filter:$pfilter;
      filter:$pfilter;
      background-color:black;
+ }*/
+ 
+ .channel-header{
+     margin-top:-2em;
  }
 
 nav{
