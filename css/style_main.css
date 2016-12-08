@@ -32,6 +32,9 @@ iframe {
 .italic {
   font-style: italic; }
 
+.darken {
+  background-color: rgba(0, 0, 0, 0.25); }
+
 .dropdown-content li > a, .dropdown-content li > span {
   color: #EC2228; }
 
@@ -53,6 +56,18 @@ iframe {
 }*/
 .channel-header {
   margin-top: -2em; }
+
+.channel-thumbnail {
+  width: 300px;
+  position: absolute;
+  bottom: 20px; }
+
+.channel-item-thumb {
+  position: absolute;
+  width: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 nav {
   background-color: #EC2228; }

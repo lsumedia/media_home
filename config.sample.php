@@ -21,6 +21,9 @@ $config = [
     "logo_inverse" => "res/img/lsutv_master.png",
     
     /* Theme colour */
-    "theme_color" => "#EC2228"
+    "theme_color" => "#EC2228",
+    
+    /* Copyright message (@ [year] [owner]) */
+    "copyright_owner" => ""
     
 ];

@@ -13,6 +13,9 @@ class ShowHandler extends Handler{
         ?>
 <div class="parallax-container channel-header">
     <div class="parallax"><img src="<?= $data->poster ?>" /></div>
+    <div class="container">
+            <img class="channel-thumbnail" src="<?= $data->thumbnail ?>" />
+    </div>
 </div>
         <?php } ?>
 <div class="container">
@@ -64,6 +67,7 @@ class ShowHandler extends Handler{
                 <a href="<?= taskurl('show/' . $data->_id) ?>">
                     <div class="video-darkbox sixteen-nine z-depth-1">
                         <img src="<?= $data->poster ?>" class="sixteen-nine-inner"/>
+                        <img class="channel-item-thumb" src="<?= $data->thumbnail ?>" />
                     </div>
                     <h5><?= $data->title ?></h5>
                 </a>
